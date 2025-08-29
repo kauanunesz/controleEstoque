@@ -7,17 +7,20 @@
     <title>Cadastro Produtos</title>
   </head>
   <body>
-    <label for="nomeProduto">Nome do Produto</label>
-    <input type="text" name="nomeProduto" />
-    <label for="Categoria">Categoria</label>
-    <select name="Categoria" id="">
-      <option value=""></option>
-      <option value="">Categoria 1</option>
-      <option value="">Categoria 2</option>
-      <option value="">Categoria 3</option>
-    </select>
-    <label for="descricao">Descrição</label>
-    <textarea name="descricao" id="" cols="10" rows="10"></textarea>
-    <button>Voltar</button>
+    <form action="" method="post">
+      <label for="nomeProduto">Nome do Produto</label>
+      <input type="text" id="nomeProduto" name="nomeProduto" />
+      <label for="categoria">Categoria</label>
+      <select name="categoria" id="categoria">
+        <option value=""></option>
+        <option value="">Categoria 1</option>
+        <option value="">Categoria 2</option>
+        <option value="">Categoria 3</option>
+      </select>
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" name="descricao"cols="10" rows="10"></textarea>
+      <button type="submit">Salvar Produto</button>
+      <a href="home.html">Voltar</a>
+    </form>
   </body>
 </html>

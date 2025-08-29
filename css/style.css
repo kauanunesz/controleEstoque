@@ -1,5 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body{
+    background-color: #121212;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+form, .form{
+    background-color: #1f1f1f;
+    display: flex;
+    flex-flow: column;
+    width: 500px;
+    align-self: center;
+    background-color: #2e2e2e;
 }
