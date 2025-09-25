@@ -1,6 +1,6 @@
 <?php 
 
-    include 'insert_usuario.php';
+    include 'conexao.php';
 
     $select = "SELECT * FROM tb_usuario;";
 
@@ -8,6 +8,8 @@
 
 
     if(empty($insert) == false)
-    echo $query;
+        {
+            echo $query;
+        }
 
 ?>
