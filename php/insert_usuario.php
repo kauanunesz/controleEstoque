@@ -20,7 +20,7 @@
     {
         echo "<script> 
         alert ('Usuário cadastrado com sucesso!');
-        </script>;";
+        </script>";
     }
     else
     {
