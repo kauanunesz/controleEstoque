@@ -20,6 +20,7 @@
     {
         echo "<script> 
         alert ('Usuário cadastrado com sucesso!');
+        location.href='../index.php';
         </script>";
     }
     else
