@@ -1,35 +1,15 @@
 <?php
 include 'conexao.php';
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nome            = $_POST['nome'];
-    $email           = $_POST['email'];
-    $setor           = $_POST['setor'];
-    $telefone        = $_POST['telefone'];
+    $dtNasc        = $_POST['data'];
+    $login           = $_POST['login'];
     $senha           = $_POST['senha'];
-    $confirmar_senha = $_POST['confirmar'];
+    $setor           = $_POST['setor'];
 
-    if ($senha !== $confirmar_senha) {
-        echo "<script>
-        alert('As senhas não coincidem!'); window.history.back();
-        </script>";
-        exit();
-    }
+    $insert = "INSERT INTO tb_usuario VALUES (null, '$nome', '$data', '$login', '$senha', '$setor')";
+    $query = $conexao->query($insert);
 
-    $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
-
-    $sql = "INSERT INTO usuario (nome, email, setor, telefone, senha) VALUES (?, ?, ?, ?, ?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param($nome, $email, $setor, $telefone, $senha_hash);
-
-    if ($stmt->execute()) {
-        echo "<script>alert('Cadastro realizado com sucesso!'); window.location.href='../index.php';</script>";
-    } else {
-        echo "<script>alert('Erro ao cadastrar!');</script>";
-    }
-
-    $stmt->close();
-}
 ?>
 
 <script>

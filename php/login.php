@@ -14,6 +14,7 @@
 
     if ($login_form === $user_banco && $senha_form === $senha_banco)
     {
+        echo "<script>alert('Usuário cadastrado com sucesso')</script>";
         header('location: ../pages/home.html');
     }
     else
