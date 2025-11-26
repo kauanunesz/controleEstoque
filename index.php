@@ -8,12 +8,12 @@
     <!-- Colocar required nos campos obrigatórios -->
   </head>
   <body>
-    <form action="php/insert_usuario.php" method="post">
+    <form action="php/login.php" method="post">
         <h1>Login</h1>
         <input type="text" id="login" name="login" required placeholder="Login"/>
         <input type="password" id="senha" name="senha" required placeholder="Senha"/>
         <button type="submit">Entrar</button>
         <a href="pages/cadastro-usuario.html">Não tem cadastro? Cadastre-se</a>
-      </form>
+    </form>
   </body>
 </html>
