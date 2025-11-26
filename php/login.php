@@ -12,6 +12,12 @@
     $user_banco = $resultado['usuario'];
     $senha_banco = $resultado['senha'];
 
-    // ifs e elses
-    // Direcionar o forms via post
+    if ($login_form === $user_banco && $senha_form === $senha_banco)
+    {
+        header('location: ../pages/home.html');
+    }
+    else
+    {
+        echo "<script>alert('Usuario ou senha inválidos.'); history.back()</script>";
+    }
 ?>
